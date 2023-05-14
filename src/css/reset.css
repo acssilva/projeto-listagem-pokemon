@@ -1,0 +1,9 @@
+*{
+    margin: 0;    /*Espaçamento Externo*/
+    padding: 0;  /*Espaçamento Interno*/
+    box-sizing: border-box; /*Trabalhar com Altura e Largura*/
+}
+
+ul{
+    list-style: none; /*Lista sem estilo (removeu a bolinha)*/
+}

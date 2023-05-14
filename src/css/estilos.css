@@ -1,0 +1,152 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    /*Depois da virgula, é a fonte que vai ser carregada caso a do google não esteja disponível*/
+    max-width: 1280px;
+    /*Largura máxima do corpo da página*/
+    margin: 0 auto;
+    /*0 é o valor de para cima e para baixo e o auto é esquerda e direita (o auto centraliza)*/
+    background-color: #5e5b5bad;
+    /*Cor do Background*/
+    color: #333333;
+    /*Cor do Texto*/
+}
+
+body.modo-escuro {
+    /*Modo Escuro do Body*/
+    background-color: #212121;
+    color: #f5f5f5;
+}
+
+header {
+
+    display: flex;
+    /*Alinhar elementos horizontalmente e verticalmente*/
+    justify-content: space-between;
+    /*Espaço entre os elementos*/
+    padding: 25px;
+    /*Espaçamento das bordas*/
+}
+
+header .logo,
+header .imagem-botao {
+    /*Quando tem espaço antes da classe é pra estilizar a classe que esta dentro do header*/
+    width: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+header #botao-alterar-tema {
+    /*Estilizar ID's*/
+    background: none;
+    /*Sem background no botao*/
+    border: none;
+    /*sem borda no botão*/
+}
+
+header .logo:hover,
+header .imagem-botao:hover {
+    /*Pseudoclasse, vai aumentar o botao quando o mouse passar por cima*/
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+main {
+
+    padding: 25px;
+}
+
+main .listagem-pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    /*Quando não tem espaço, vai quebrando os itens um abaixo do outro*/
+    gap: 30px;
+    /*Espaçamento entre os cartões*/
+    justify-content: center;
+    /*Centralizar na pagina os cartões*/
+}
+
+main .cartao-pokemon {
+    background-color: #d8e3ec;
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+    /*Efeito de saida e entrada de 0.2s*/
+    
+}
+
+main .cartao-pokemon:hover {
+    background-color: #96d9d6;
+    transform: scale(1.05);
+    cursor: pointer;
+    
+}
+
+.modo-escuro .cartao-pokemon {
+    background-color: #a8a8a8;
+}
+
+main .cartao-pokemon .informacoes {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+
+main .cartao-pokemon .informacoes span {
+
+    padding: 5px;
+    text-transform: uppercase;
+    /*Deixar todas as letras maiusculas*/
+}
+
+/*Padronizando o tamanho dos gifs*/
+main .cartao-pokemon .gif {
+    width: 90px;
+    height: 90px;
+
+}
+
+main .cartao-pokemon .tipos {
+
+    display: flex;
+    gap: 15px;
+}
+
+main .cartao-pokemon .tipo {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.grama {
+    background-color: #7ac74c;
+}
+
+.veneno {
+    background-color: #df67ddfb;
+}
+
+.fogo {
+    background-color: #ee8130;
+}
+
+.Agua {
+    background-color: #6390f0;
+}
+
+.Inseto {
+    background-color: #a6b91a;
+}
+
+main .descricao {
+    max-height: 80px;
+    /*Altura maxima*/
+    overflow-y: Scroll;
+    /*Cortar o texto na vertical e cria scroll*/
+    font-size: 14px;
+    padding-right: 10px;
+    /*Não ficar grudado na barra de rolagem*/
+}
